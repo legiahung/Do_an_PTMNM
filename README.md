@@ -3,7 +3,7 @@
 Mô tả: 
       Web bán trang sức gồm các chức năng sau :
 -  Chức năng đăng kí , đăng nhập
-+ Đăng nhập theo quyền admin: Được thêm , sửa, xóa sản phẩm , đơn hang , nhân viên, khách hàng; xem thống kê doanh thu
++ Đăng nhập theo quyền admin: Được thêm , sửa, xóa sản phẩm , đơn hàng , nhân viên, khách hàng; xem thống kê doanh thu
 + Đăng nhập theo quyền khách hang: thêm giỏ hàng, thêm sản phẩm vào mục yêu thích, thanh toán,  
 - Phần Trang chủ :
 + Hiển thị user 
