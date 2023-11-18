@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Bài tập cá nhân</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #fff; /* Màu nền trắng */
+      color: #333; /* Màu chữ đen */
+    }
+    h1{
+    color: #fff; 
+    text-align: center;
+    }
+    header {
+      background-color: #ffcccb; /* Màu hồng */
+      padding: 20px;
+      text-align: center;
+      display: flex;
+      flex-direction: column; /* Hiển thị các phần tử theo cột */
+      align-items: center; /* Căn các phần tử theo trục ngang */
+    }
+
+    label {
+      color: #fff; /* Màu chữ trắng */
+      font-weight: bold;
+    }
+
+    select {
+      padding: 8px;
+      font-size: 16px;
+      border-radius: 4px;
+      margin-bottom: 10px; /* Khoảng cách giữa các dropdown */
+    }
+
+    #fileFrame {
+      width: 100%;
+      height: 500px;
+      border: 1px solid #ccc;
+    }
+    .new-header-top-logo {
+        margin-right: auto; /* Đẩy new-header-top-logo về bên trái */
+        margin-left: 20px;
+		margin-bottom: 10px;
+    }
+  </style>
+</head>
+<body>
+  
+  <header>
+    <div class="new-header-top-logo">
+      <a href="Trangchu.php">
+          <img class="dt-width-auto" width="170" height="35" src="https://file.hstatic.net/200000103143/file/pandora_acf7bd54e6534a07be748b51c51c637c.svg" alt="Pandora Việt Nam"/>
+      </a>
+  </div>
+  <h1>Bài tập cá nhân:</h1>
+  <select id="files" name="files" onchange="openFile(this.value)">
+    <option value="" selected disabled>Lê Gia Hưng</option>
+        <optgroup label="Mãng - Chuỗi - Hàm">
+            <option value="BT_CaNhan/Le-Gia-Hung/MANG-CHUOI/(bai1)pheptinh.php">Bài 1 - Phép tính</option>
+            <option value="BT_CaNhan/Le-Gia-Hung/MANG-CHUOI/(bai2)tongdayso.php">Bài 2 - Tổng dãy số</option>
+            <option value="BT_CaNhan/Le-Gia-Hung/MANG-CHUOI/(bai3)mangphatsinh.php">Bài 3 - Mảng phát sinh</option>
+            <option value="BT_CaNhan/Le-Gia-Hung/MANG-CHUOI/(bai4)mangtimkiem.php">Bài 4 - Mảng tìm kiếm</option>
+            <option value="BT_CaNhan/Le-Gia-Hung/MANG-CHUOI/(bai5)mangthaythe.php">Bài 5 - Mảng thay thế</option>
+            <option value="BT_CaNhan/Le-Gia-Hung/MANG-CHUOI/(bai6)mangsapxep.php">Bài 6 - Mảng sắp xếp</option>
+            <option value="BT_CaNhan/Le-Gia-Hung/MANG-CHUOI/(bai7)mangnamamlich.php">Bài 7 - Mảng năm âm lịch</option>
+        </optgroup>
+        <optgroup label="PHP + FORM">
+            <option value="BT_CaNhan/Le-Gia-Hung/PHP+FORM/(bai1)dientichhinhchunhat.php">Bài 1 - Diện tích hình chữ nhật</option>
+            <option value="BT_CaNhan/Le-Gia-Hung/PHP+FORM/(bai2)chuvidientichhinhtron.php">Bài 2 - Chu vi - Diện tích hình tròn</option>
+            <option value="BT_CaNhan/Le-Gia-Hung/PHP+FORM/(bai3)thanhtoantiendien.php">Bài 3 - Thanh toán tiền điện</option>
+            <option value="BT_CaNhan/Le-Gia-Hung/PHP+FORM/(bai4)ketquathidaihoc.php">Bài 4 - Kết quả thi đại học</option>
+            <option value="BT_CaNhan/Le-Gia-Hung/PHP+FORM/(bai5)karaoke.php">Bài 5 - Tính tiền Karaoke</option>
+            <option value="BT_CaNhan/Le-Gia-Hung/PHP+FORM/(bai5)Karaoke_plus.php">Bài 5.2 - Tính tiền karaoke tiếp theo</option>
+            <option value="BT_CaNhan/Le-Gia-Hung/PHP+FORM/(bai6)nhaplieupheptinh.php">Bài 6 - Nhập liệu phép tính</option>
+            <option value="BT_CaNhan/Le-Gia-Hung/PHP+FORM/(bai7)nhappheptinh.php">Bài 7 - Nhập phép tính</option>
+            <option value="BT_CaNhan/Le-Gia-Hung/PHP+FORM/(bai8)form.php">Bài 8 - Thông tin</option>     
+        </optgroup>
+        <optgroup label="PHP + SQL">
+            <option value="BT_CaNhan/Le-Gia-Hung/PHP+SQL/BT1.php">Bài 1 - Thông tin hãng sữa</option>
+            <option value="BT_CaNhan/Le-Gia-Hung/PHP+SQL/BT2.php">Bài 2 - Thông tin khách hàng</option>
+            <option value="BT_CaNhan/Le-Gia-Hung/PHP+SQL/BT3.php">Bài 3 - Thông tin khách hàng</option>
+            <option value="BT_CaNhan/Le-Gia-Hung/PHP+SQL/BT4.php">Bài 4 - Thông tin sữa</option>
+            <option value="BT_CaNhan/Le-Gia-Hung/PHP+SQL/BT5.php">Bài 5 - Thông tin sản phẩm</option>
+            <option value="BT_CaNhan/Le-Gia-Hung/PHP+SQL/BT6.php">Bài 6 - Thông tin sản phẩm</option>
+            <option value="BT_CaNhan/Le-Gia-Hung/PHP+SQL/BT7.php">Bài 7 - Thông tin sản phẩm(xem chi tiết)</option>
+            <option value="BT_CaNhan/Le-Gia-Hung/PHP+SQL/BT8.php">Bài 8 - Thông tin chi tiết các loại sữa</option>
+            <option value="BT_CaNhan/Le-Gia-Hung/PHP+SQL/BT9.php">Bài 9 - Tìm kiếm thông tin sữa/option>
+            <option value="BT_CaNhan/Le-Gia-Hung/PHP+SQL/BT10.php">Bài 10 - Tìm kiếm thông tin sữa</option>
+            <option value="BT_CaNhan/Le-Gia-Hung/PHP+SQL/BT11.php">Bài 11- Thêm sữa mới</option>
+            <option value="BT_CaNhan/Le-Gia-Hung/PHP+SQL/BT12.php">Bài 12 - Chỉnh sửa thông tin khách hàng</option>   
+        </optgroup>
+  </select>
+  <select id="files" name="files" onchange="openFile(this.value)">
+    <option value="" selected disabled>Nguyễn Thị Mai Anh</option>
+        <optgroup label="Mãng - Chuỗi - Hàm">
+            <option value="BT_CaNhan/Nguyen-Thi-Mai-Anh/MANG-CHUOI/bai1.php">Bài 1 - Phép tính</option>
+            <option value="BT_CaNhan/Nguyen-Thi-Mai-Anh/MANG-CHUOI/BT2.php">Bài 2 - Tổng dãy số</option>
+            <option value="BT_CaNhan/Nguyen-Thi-Mai-Anh/MANG-CHUOI/bt3.php">Bài 3 - Mảng phát sinh</option>
+            <option value="BT_CaNhan/Nguyen-Thi-Mai-Anh/MANG-CHUOI/bt4.php">Bài 4 - Mảng tìm kiếm</option>
+            <option value="BT_CaNhan/Nguyen-Thi-Mai-Anh/MANG-CHUOI/bt5.php">Bài 5 - Mảng thay thế</option>
+            <option value="BT_CaNhan/Nguyen-Thi-Mai-Anh/MANG-CHUOI/bt6.php">Bài 6 - Mảng sắp xếp</option>
+            <option value="BT_CaNhan/Nguyen-Thi-Mai-Anh/MANG-CHUOI/bt7.php">Bài 7 - Mảng năm âm lịch</option>
+        </optgroup>
+        <optgroup label="PHP + FORM">
+            <option value="BT_CaNhan/Nguyen-Thi-Mai-Anh/PHP+FORM/BT1.1.php">Bài 1 - Diện tích hình chữ nhật</option>
+            <option value="BT_CaNhan/Nguyen-Thi-Mai-Anh/PHP+FORM/BT2.1.php">Bài 2 - Chu vi - Diện tích hình tròn</option>
+            <option value="BT_CaNhan/Nguyen-Thi-Mai-Anh/PHP+FORM/BT3.1.php">Bài 3 - Thanh toán tiền điện</option>
+            <option value="BT_CaNhan/Nguyen-Thi-Mai-Anh/PHP+FORM/BT4.1.php">Bài 4 - Kết quả thi đại học</option>
+            <option value="BT_CaNhan/Nguyen-Thi-Mai-Anh/PHP+FORM/BT5.1.php">Bài 5 - Tính tiền Karaoke</option>
+            <option value="BT_CaNhan/Nguyen-Thi-Mai-Anh/PHP+FORM/karaoke.php">Bài 5.2 - Tính tiền karaoke tiếp theo</option>
+            <option value="BT_CaNhan/Nguyen-Thi-Mai-Anh/PHP+FORM/BT6.php">Bài 6 - Nhập liệu phép tính</option>
+            <option value="BT_CaNhan/Nguyen-Thi-Mai-Anh/PHP+FORM/nhapptBT7.php">Bài 7 - Nhập phép tính</option>
+            <option value="BT_CaNhan/Nguyen-Thi-Mai-Anh/PHP+FORM/formBT8.php">Bài 8 - Thông tin</option> 
+            <option value="BT_CaNhan/Nguyen-Thi-Mai-Anh/PHP+FORM/BT9.php">Bài 9 - Xây dựng giao diện trang chủ</option>         
+        </optgroup>
+        <optgroup label="PHP + SQL">
+            <option value="BT_CaNhan/Nguyen-Thi-Mai-Anh/PHP+SQL/BT1.php">Bài 1 - Thông tin hãng sữa</option>
+            <option value="BT_CaNhan/Nguyen-Thi-Mai-Anh/PHP+SQL/BT2.php">Bài 2 - Thông tin khách hàng</option>
+            <option value="BT_CaNhan/Nguyen-Thi-Mai-Anh/PHP+SQL/BT3.php">Bài 3 - Thông tin khách hàng</option>
+            <option value="BT_CaNhan/Nguyen-Thi-Mai-Anh/PHP+SQL/BT4.php">Bài 4 - Thông tin sữa</option>
+            <option value="BT_CaNhan/Nguyen-Thi-Mai-Anh/PHP+SQL/BT5.php">Bài 5 - Thông tin sản phẩm</option>
+            <option value="BT_CaNhan/Nguyen-Thi-Mai-Anh/PHP+SQL/BT6.php">Bài 6 - Thông tin sản phẩm</option>
+            <option value="BT_CaNhan/Nguyen-Thi-Mai-Anh/PHP+SQL/BT7.php">Bài 7 - Thông tin sản phẩm(xem chi tiết)</option>
+            <option value="BT_CaNhan/Nguyen-Thi-Mai-Anh/PHP+SQL/BT8.php">Bài 8 - Thông tin chi tiết các loại sữa</option>
+            <option value="BT_CaNhan/Nguyen-Thi-Mai-Anh/PHP+SQL/BT9.php">Bài 9 - Tìm kiếm thông tin sữa/option>
+            <option value="BT_CaNhan/Nguyen-Thi-Mai-Anh/PHP+SQL/BT10.php">Bài 10 - Tìm kiếm thông tin sữa</option>
+            <option value="BT_CaNhan/Nguyen-Thi-Mai-Anh/PHP+SQL/BT11.php">Bài 11- Thêm sữa mới</option>
+            <option value="BT_CaNhan/Nguyen-Thi-Mai-Anh/PHP+SQL/BT12.php">Bài 12 - Chỉnh sửa thông tin khách hàng</option>   
+        </optgroup>
+  </select>
+  <select id="files" name="files" onchange="openFile(this.value)">
+    <option value="" selected disabled>Trương Nguyễn Gia Hưng</option>
+    <optgroup label="Mãng - Chuỗi - Hàm">
+      <option value="BT_CaNhan/Truong-Nguyen-Gia-Hung/MANG-CHUOI/bai1.php">Bài 1 - Phép tính</option>
+      <option value="BT_CaNhan/Truong-Nguyen-Gia-Hung/MANG-CHUOI/bai2.php">Bài 2 - Tổng dãy số</option>
+      <option value="BT_CaNhan/Truong-Nguyen-Gia-Hung/MANG-CHUOI/bai3.php">Bài 3 - Mảng phát sinh</option>
+      <option value="BT_CaNhan/Truong-Nguyen-Gia-Hung/MANG-CHUOI/bai4.php">Bài 4 - Mảng tìm kiếm</option>
+      <option value="BT_CaNhan/Truong-Nguyen-Gia-Hung/MANG-CHUOI/bai5.php">Bài 5 - Mảng thay thế</option>
+      <option value="BT_CaNhan/Truong-Nguyen-Gia-Hung/MANG-CHUOI/bai6.php">Bài 6 - Mảng sắp xếp</option>
+      <option value="BT_CaNhan/Truong-Nguyen-Gia-Hung/MANG-CHUOI/bai7.php">Bài 7 - Mảng năm âm lịch</option>
+  </optgroup>
+  <optgroup label="PHP + FORM">
+      <option value="BT_CaNhan/Truong-Nguyen-Gia-Hung/PHP+FORM/bai1.php">Bài 1 - Diện tích hình chữ nhật</option>
+      <option value="BT_CaNhan/Truong-Nguyen-Gia-Hung/PHP+FORM/bai2.php">Bài 2 - Chu vi - Diện tích hình tròn</option>
+      <option value="BT_CaNhan/Truong-Nguyen-Gia-Hung/PHP+FORM/bai3.php">Bài 3 - Thanh toán tiền điện</option>
+      <option value="BT_CaNhan/Truong-Nguyen-Gia-Hung/PHP+FORM/bai4.php">Bài 4 - Kết quả thi đại học</option>
+      <option value="BT_CaNhan/Truong-Nguyen-Gia-Hung/PHP+FORM/bai5.php">Bài 5 - Tính tiền Karaoke</option>
+      <option value="BT_CaNhan/Truong-Nguyen-Gia-Hung/PHP+FORM/bai5++.php">Bài 5.2 - Tính tiền karaoke tiếp theo</option>
+      <option value="BT_CaNhan/Truong-Nguyen-Gia-Hung/PHP+FORM/bai6.php">Bài 6 - Nhập liệu phép tính</option>
+      <option value="BT_CaNhan/Truong-Nguyen-Gia-Hung/PHP+FORM/bai7.php">Bài 7 - Nhập phép tính</option>
+      <option value="BT_CaNhan/Truong-Nguyen-Gia-Hung/PHP+FORM/bai8.php">Bài 8 - Thông tin</option>     
+  </optgroup>
+  <optgroup label="PHP + SQL">
+      <option value="BT_CaNhan/Truong-Nguyen-Gia-Hung/PHP+SQL/BT1.php">Bài 1 - Thông tin hãng sữa</option>
+      <option value="BT_CaNhan/Truong-Nguyen-Gia-Hung/PHP+SQL/BT2.php">Bài 2 - Thông tin khách hàng</option>
+      <option value="BT_CaNhan/Truong-Nguyen-Gia-Hung/PHP+SQL/BT3.php">Bài 3 - Thông tin khách hàng</option>
+      <option value="BT_CaNhan/Truong-Nguyen-Gia-Hung/PHP+SQL/BT4.php">Bài 4 - Thông tin sữa</option>
+      <option value="BT_CaNhan/Truong-Nguyen-Gia-Hung/PHP+SQL/BT5.php">Bài 5 - Thông tin sản phẩm</option>
+      <option value="BT_CaNhan/Truong-Nguyen-Gia-Hung/PHP+SQL/BT6.php">Bài 6 - Thông tin sản phẩm</option>
+      <option value="BT_CaNhan/Truong-Nguyen-Gia-Hung/PHP+SQL/BT7.php">Bài 7 - Thông tin sản phẩm(xem chi tiết)</option>
+      <option value="BT_CaNhan/Truong-Nguyen-Gia-Hung/PHP+SQL/BT8.php">Bài 8 - Thông tin chi tiết các loại sữa</option>
+      <option value="BT_CaNhan/Truong-Nguyen-Gia-Hung/PHP+SQL/BT9.php">Bài 9 - Tìm kiếm thông tin sữa/option>
+      <option value="BT_CaNhan/Truong-Nguyen-Gia-Hung/PHP+SQL/BT10.php">Bài 10 - Tìm kiếm thông tin sữa</option>
+      <option value="BT_CaNhan/Truong-Nguyen-Gia-Hung/PHP+SQL/BT11.php">Bài 11- Thêm sữa mới</option>
+      <option value="BT_CaNhan/Truong-Nguyen-Gia-Hung/PHP+SQL/BT12.php">Bài 12 - Chỉnh sửa thông tin khách hàng</option> 
+  </optgroup>
+  </select>
+  <select id="files" name="files" onchange="openFile(this.value)">
+    <option value="" selected disabled>Đoàn Như Phục</option>
+      <optgroup label="Mãng - Chuỗi - Hàm">
+        <option value="BT_CaNhan/Doan-Nhu-Phuc/MANG CHUOI/bai1.php">Bài 1 - Phép tính</option>
+        <option value="BT_CaNhan/Doan-Nhu-Phuc/MANG CHUOI/bai2.php">Bài 2 - Tổng dãy số</option>
+        <option value="BT_CaNhan/Doan-Nhu-Phuc/MANG CHUOI/bai3.php">Bài 3 - Mảng phát sinh</option>
+        <option value="BT_CaNhan/Doan-Nhu-Phuc/MANG CHUOI/bai4.php">Bài 4 - Mảng tìm kiếm</option>
+        <option value="BT_CaNhan/Doan-Nhu-Phuc/MANG CHUOI/bai5.php">Bài 5 - Mảng thay thế</option>
+        <option value="BT_CaNhan/Doan-Nhu-Phuc/MANG CHUOI/bai6.php">Bài 6 - Mảng sắp xếp</option>
+        <option value="BT_CaNhan/Doan-Nhu-Phuc/MANG CHUOI/bai7.php">Bài 7 - Mảng năm âm lịch</option>
+    </optgroup>
+    <optgroup label="PHP + FORM">
+        <option value="BT_CaNhan/Doan-Nhu-Phuc/PHP+FORM/BT1.php">Bài 1 - Diện tích hình chữ nhật</option>
+        <option value="BT_CaNhan/Doan-Nhu-Phuc/PHP+FORM/BT2.php">Bài 2 - Chu vi - Diện tích hình tròn</option>
+        <option value="BT_CaNhan/Doan-Nhu-Phuc/PHP+FORM/BT3.php">Bài 3 - Thanh toán tiền điện</option>
+        <option value="BT_CaNhan/Doan-Nhu-Phuc/PHP+FORM/BT4.php">Bài 4 - Kết quả thi đại học</option>
+        <option value="BT_CaNhan/Doan-Nhu-Phuc/PHP+FORM/BT5.1.php">Bài 5 - Tính tiền Karaoke</option>
+        <option value="BT_CaNhan/Doan-Nhu-Phuc/PHP+FORM/BT5++.php">Bài 5.2 - Tính tiền karaoke tiếp theo</option>
+        <option value="BT_CaNhan/Doan-Nhu-Phuc/PHP+FORM/BT6.php">Bài 6 - Nhập liệu phép tính</option>
+        <option value="BT_CaNhan/Doan-Nhu-Phuc/PHP+FORM/BT7.php">Bài 7 - Nhập phép tính</option>
+        <option value="BT_CaNhan/Doan-Nhu-Phuc/PHP+FORM/BT8.php">Bài 8 - Thông tin</option>     
+    </optgroup>
+    <optgroup label="PHP + SQL">
+        <option value="BT_CaNhan/Doan-Nhu-Phu/PHP+SQL/BT1.php">Bài 1 - Thông tin hãng sữa</option>
+        <option value="BT_CaNhan/Doan-Nhu-Phu/PHP+SQL/BT2.php">Bài 2 - Thông tin khách hàng</option>
+        <option value="BT_CaNhan/Doan-Nhu-Phu/PHP+SQL/BT3.php">Bài 3 - Thông tin khách hàng</option>
+        <option value="BT_CaNhan/Doan-Nhu-Phu/PHP+SQL/BT4.php">Bài 4 - Thông tin sữa</option>
+        <option value="BT_CaNhan/Doan-Nhu-Phu/PHP+SQL/BT5.php">Bài 5 - Thông tin sản phẩm</option>
+        <option value="BT_CaNhan/Doan-Nhu-Phu/PHP+SQL/BT6.php">Bài 6 - Thông tin sản phẩm</option>
+        <option value="BT_CaNhan/Doan-Nhu-Phu/PHP+SQL/BT7.php">Bài 7 - Thông tin sản phẩm(xem chi tiết)</option>
+        <option value="BT_CaNhan/Doan-Nhu-Phu/PHP+SQL/BT8.php">Bài 8 - Thông tin chi tiết các loại sữa</option>
+        <option value="BT_CaNhan/Doan-Nhu-Phu/PHP+SQL/BT9.php">Bài 9 - Tìm kiếm thông tin sữa/option>
+        <option value="BT_CaNhan/Doan-Nhu-Phu/PHP+SQL/BT10.php">Bài 10 - Tìm kiếm thông tin sữa</option>
+        <option value="BT_CaNhan/Doan-Nhu-Phu/PHP+SQL/BT11.php">Bài 11- Thêm sữa mới</option>
+        <option value="BT_CaNhan/Doan-Nhu-Phu/PHP+SQL/BT12.php">Bài 12 - Chỉnh sửa thông tin khách hàng</option>  
+    </optgroup>
+  </select>
+  </header>
+  <iframe id="fileFrame" style="width: 100%; height: 500px; border: 1px solid #ccc;"></iframe>
+
+  <script>
+    function openFile(fileUrl) {
+      if (fileUrl) {
+        document.getElementById('fileFrame').src = fileUrl;
+      }
+    }
+  </script>
+</body>
+</html>
