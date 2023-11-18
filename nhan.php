@@ -463,7 +463,7 @@ $result = mysqli_query($conn, $query);
                 echo "<img src='images/" . $row['ANH'] . "' alt='Product Image'><br>";
                 echo "<strong>" . $row['TENTS'] . "</strong><br>";
                 echo "Giá: " . $row['GIA'] . " VNĐ<br>";
-                echo "<a class='details-button' href='#'>Xem chi tiết</a>";
+		echo "<a href='Xemchitiet.php?ID_TS=" . $row['ID_TS'] . "' class='details-button'> Xem chi tiết </a>";
                 echo "</div>";
             }
             ?>
