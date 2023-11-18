@@ -1,0 +1,1 @@
+<h2 style="text-align: center;"> Đây là trang thông tin  được cập nhập đầy đủ và chi tiết nhất </h2>

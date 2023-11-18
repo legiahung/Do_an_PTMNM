@@ -1,0 +1,1 @@
+<h2 style="text-align: center;"> Mọi chi tiết xin liên hệ với chúng tôi thông qua form liên hệ thuộc website </h2>
